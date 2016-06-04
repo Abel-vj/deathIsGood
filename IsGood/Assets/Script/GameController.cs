@@ -43,6 +43,7 @@ public class GameController : MonoBehaviour {
 		countDownSprites [2] = countDownSprite2;
 		countDownSprites [3] = countDownSprite3;
 
+
 		StartCoroutine( "CountDown" );
 	}
 
