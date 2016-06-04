@@ -8,12 +8,12 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 441258}
-  - 212: {fileID: 21219352}
-  - 114: {fileID: 11463450}
-  - 54: {fileID: 5457646}
-  - 95: {fileID: 9568084}
-  - 136: {fileID: 13660320}
-  - 114: {fileID: 11463290}
+  - 212: {fileID: 21241150}
+  - 114: {fileID: 11487856}
+  - 54: {fileID: 5417804}
+  - 95: {fileID: 9500576}
+  - 136: {fileID: 13686142}
+  - 114: {fileID: 11481186}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -80,7 +80,7 @@ Transform:
   m_GameObject: {fileID: 182172}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 441258}
   m_RootOrder: 2
@@ -91,7 +91,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 102176}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.36, y: 0.75, z: -1.03}
+  m_LocalPosition: {x: 0, y: 0.42, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 489466}
@@ -107,7 +107,7 @@ Transform:
   m_GameObject: {fileID: 192854}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 441258}
   m_RootOrder: 1
@@ -118,12 +118,12 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 196814}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.534, z: 0}
-  m_LocalScale: {x: 1, y: 0.1, z: 1}
+  m_LocalPosition: {x: 0, y: -0.25, z: 0}
+  m_LocalScale: {x: 1, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 441258}
   m_RootOrder: 0
---- !u!54 &5457646
+--- !u!54 &5417804
 Rigidbody:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -148,7 +148,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.16, y: 0.63, z: 0.22}
+  m_Size: {x: 0.15, y: 0.12, z: -0.03}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &6524924
 BoxCollider:
@@ -174,7 +174,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!95 &9568084
+--- !u!95 &9500576
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 1
@@ -202,7 +202,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ac2f2a068f11c646b2e165e3f27a689, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 11463290}
+  player: {fileID: 11481186}
 --- !u!114 &11440918
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -214,7 +214,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9ca1fe0654b06c4b9c4096582c2b91e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 11463290}
+  player: {fileID: 11481186}
 --- !u!114 &11449892
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -227,7 +227,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tag: Ground
---- !u!114 &11463290
+--- !u!114 &11481186
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -243,7 +243,7 @@ MonoBehaviour:
   speed: 7
   clamSpeed: 0.5
   forceJump: 3
---- !u!114 &11463450
+--- !u!114 &11487856
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -254,11 +254,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e81149af172bf9d4697ca3342194a014, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerRigidbody: {fileID: 5457646}
-  animatorController: {fileID: 9568084}
+  playerRigidbody: {fileID: 5417804}
+  animatorController: {fileID: 9500576}
   ground: {fileID: 11449892}
-  player: {fileID: 11463290}
---- !u!136 &13660320
+  player: {fileID: 11481186}
+--- !u!136 &13686142
 CapsuleCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -267,11 +267,11 @@ CapsuleCollider:
   m_Material: {fileID: 13400000, guid: b6a47f19a54d9df4d881120253bc42e6, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.2695
-  m_Height: 2.42
+  m_Radius: 0.15
+  m_Height: 2
   m_Direction: 1
-  m_Center: {x: 0, y: 0.77, z: 0}
---- !u!212 &21219352
+  m_Center: {x: 0, y: 0.76, z: 0}
+--- !u!212 &21241150
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -298,7 +298,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingOrder: 10
   m_Sprite: {fileID: 21300000, guid: 58077429f6084da42b33efb69a5206a1, type: 3}
-  m_Color: {r: 0.7819174, g: 0.8088235, b: 0.32115054, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
 --- !u!1001 &100100000
