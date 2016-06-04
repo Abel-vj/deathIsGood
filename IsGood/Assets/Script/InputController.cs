@@ -18,7 +18,6 @@ public class InputController : MonoBehaviour {
 
 	private Direction lastDirection;
 
-
 	// Use this for initialization
 	void Start () {
 		Debug.Log(" Hola mundo ");
@@ -53,10 +52,11 @@ public class InputController : MonoBehaviour {
 
 		if ( ICanJump () ) {
 			Jump( moveX, moveZ );
+			print ("CAN D ()"  + ground.IsDetected());
 		} else {
 			Run( moveX, moveZ );
 		}
-
+			
 		Direction direction = GetDirection( (int) moveX, (int) moveZ );
 		SetAnimation( direction );
 
