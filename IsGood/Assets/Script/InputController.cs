@@ -15,13 +15,17 @@ public class InputController : MonoBehaviour {
 	public Animator animatorController;
 	public DetectElementByTag ground;
 	public PlayerController player;
-
 	private Direction lastDirection;
+	private bool gameStarted = false;
+
+	public void StartGame () {
+		gameStarted = true;
+		return;
+	}
 
 	// Use this for initialization
 	void Start () {
 		Debug.Log(" Hola mundo ");
-
 		lastDirection = Direction.NONE;
 	}
 
@@ -47,6 +51,9 @@ public class InputController : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update() {
+		if (!gameStarted)
+			return;
+
 		float moveX = Input.GetAxis( "MoveX_P" + player.idPlayer ); 
 		float moveZ = Input.GetAxis( "MoveZ_P" + player.idPlayer );
 
