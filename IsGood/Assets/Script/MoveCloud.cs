@@ -2,37 +2,37 @@
 using System.Collections;
 
 public class MoveCloud : MonoBehaviour {
-	
+
 	public Transform cloud;
-	public Transform origin;
-	public Transform destine;
+	public Transform startOrigin;
+	public Transform startDestine;
 
-	public float loopTime;
-
-	private bool enable;
-	private float frameTime;
+	public float animationDuration;
+	public float delayLoopAnimaton;
+	float currentTime = 0.0f;
 
 
 	// Use this for initialization
 	void Start () {
-		frameTime = 0.2f;
-		StartCoroutine( "Run" );	
+		StartCoroutine( Move(startOrigin, startDestine) );
 	}
 
-	IEnumerator Run() {
-		while (true) {
-			yield return new WaitForSeconds(frameTime);
-			Move ();
+
+	private IEnumerator Move( Transform origin, Transform destine ) {
+		float currentTime = 0;
+
+		while (currentTime < animationDuration)   {
+			cloud.position = Vector3.Lerp( origin.position, destine.position, (currentTime / animationDuration) );
+			currentTime += Time.deltaTime;
+			yield return new WaitForEndOfFrame();
 		}
+
+		yield return new WaitForSeconds( delayLoopAnimaton );
+		StopCoroutine( "Move" );
+		StartCoroutine( Move(destine, origin) );
+
 	}
 
-	void Move () {
-		cloud.position = Vector3.Lerp (origin.position, destine.position, 1f);
-		
-	}
 
-	// Update is called once per frame
-	void Update () {
-	
-	}
+
 }
