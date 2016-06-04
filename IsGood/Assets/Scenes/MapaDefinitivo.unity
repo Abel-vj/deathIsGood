@@ -1031,6 +1031,12 @@ GameObject:
 Transform:
   m_PrefabParentObject: {fileID: 441258, guid: 331cccdc448adfa4ca355a0cf06151c8, type: 2}
   m_PrefabInternal: {fileID: 1743973512}
+--- !u!114 &276512511 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11487856, guid: 331cccdc448adfa4ca355a0cf06151c8,
+    type: 2}
+  m_PrefabInternal: {fileID: 1743973512}
+  m_Script: {fileID: 11500000, guid: e81149af172bf9d4697ca3342194a014, type: 3}
 --- !u!1001 &277306596
 Prefab:
   m_ObjectHideFlags: 0
@@ -12950,6 +12956,12 @@ Transform:
 GameObject:
   m_PrefabParentObject: {fileID: 102176, guid: 331cccdc448adfa4ca355a0cf06151c8, type: 2}
   m_PrefabInternal: {fileID: 277306596}
+--- !u!114 &1673416567 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11487856, guid: 331cccdc448adfa4ca355a0cf06151c8,
+    type: 2}
+  m_PrefabInternal: {fileID: 277306596}
+  m_Script: {fileID: 11500000, guid: e81149af172bf9d4697ca3342194a014, type: 3}
 --- !u!4 &1673416569 stripped
 Transform:
   m_PrefabParentObject: {fileID: 441258, guid: 331cccdc448adfa4ca355a0cf06151c8, type: 2}
@@ -13003,6 +13015,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player1: {fileID: 276512505}
   player2: {fileID: 1673416562}
+  inputControllerP1: {fileID: 276512511}
+  inputControllerP2: {fileID: 1673416567}
+  countDownSprite3: {fileID: 0}
+  countDownSprite2: {fileID: 0}
+  countDownSprite1: {fileID: 0}
+  countDownSprite0: {fileID: 0}
+  countDownEnabled: 1
 --- !u!1001 &1683292963
 Prefab:
   m_ObjectHideFlags: 0
@@ -13407,6 +13426,10 @@ Prefab:
     - target: {fileID: 102176, guid: 331cccdc448adfa4ca355a0cf06151c8, type: 2}
       propertyPath: m_Name
       value: Player1
+      objectReference: {fileID: 0}
+    - target: {fileID: 441258, guid: 331cccdc448adfa4ca355a0cf06151c8, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 331cccdc448adfa4ca355a0cf06151c8, type: 2}
