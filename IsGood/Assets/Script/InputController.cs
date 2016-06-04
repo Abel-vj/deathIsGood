@@ -18,6 +18,8 @@ public class InputController : MonoBehaviour {
 	private Direction lastDirection;
 	private bool gameStarted = false;
 
+	private bool isHiting = false;
+
 	public void StartGame () {
 		gameStarted = true;
 		return;
@@ -57,14 +59,20 @@ public class InputController : MonoBehaviour {
 		float moveX = Input.GetAxis( "MoveX_P" + player.idPlayer ); 
 		float moveZ = Input.GetAxis( "MoveZ_P" + player.idPlayer );
 
+		if( isHiting && ground.IsDetected ()) {
+			isHiting = false;
+		}
+
+
+		Direction direction = GetDirection( (int) moveX, (int) moveZ );
+
 		if ( ICanJump () ) {
-			Jump( moveX, moveZ );
+			Jump( moveX, moveZ, direction );
 			print ("CAN D ()"  + ground.IsDetected());
 		} else {
 			Run( moveX, moveZ );
 		}
 			
-		Direction direction = GetDirection( (int) moveX, (int) moveZ );
 		SetAnimation( direction );
 
 
@@ -77,14 +85,50 @@ public class InputController : MonoBehaviour {
 	}
 		
 
-	void Jump( float x, float z ) {
+	void Jump( float x, float z, Direction direction ) {
 		if ( !ground.IsDetected()  )
 			return;
 
+		isHiting = true;
 
 		Vector3 force = new Vector3(x, player.forceJump, z);
 
 		playerRigidbody.AddForce( force, ForceMode.Impulse );
+
+
+		Debug.Log ("aaaaTOP" + direction);
+
+		switch(direction) {
+			case Direction.TOP: {
+					animatorController.SetTrigger( "HITT" );
+					//Debug.Log ("TOP");
+				}
+				break;
+			case Direction.BOTTON: {
+					animatorController.SetTrigger( "HITB" );
+					//Debug.Log ("BOTTON");
+
+				}
+				break;
+			case Direction.LEFT: {
+					animatorController.SetTrigger( "HITL" );
+					//Debug.Log ("LEFT");
+
+				}
+				break;
+			case Direction.RIGHT: {
+					animatorController.SetTrigger( "HITR" );
+					//Debug.Log ("RIGTH");
+
+				}
+			break;
+		case Direction.NONE: {
+				animatorController.SetTrigger( "HITB" );
+				//Debug.Log ("IDLE");
+
+			}
+			break;
+		}
 	
 
 	}
@@ -93,37 +137,43 @@ public class InputController : MonoBehaviour {
 		if (lastDirection == direction)
 			return;
 
+		if (isHiting) {
+			return;
+		} 
+
 		switch(direction) {
 			case Direction.TOP: {
-				animatorController.SetTrigger( "TOP" );
-				//Debug.Log ("TOP");
-			}
-			break;
+					animatorController.SetTrigger( "TOP" );
+					//Debug.Log ("TOP");
+				}
+				break;
 			case Direction.BOTTON: {
-				animatorController.SetTrigger( "BOTTON" );
-				//Debug.Log ("BOTTON");
+					animatorController.SetTrigger( "BOTTON" );
+					//Debug.Log ("BOTTON");
 
-			}
-			break;
+				}
+				break;
 			case Direction.LEFT: {
-				animatorController.SetTrigger( "LEFT" );
-				//Debug.Log ("LEFT");
+					animatorController.SetTrigger( "LEFT" );
+					//Debug.Log ("LEFT");
 
-			}
-			break;
+				}
+				break;
 			case Direction.RIGHT: {
-				animatorController.SetTrigger( "RIGTH" );
-				//Debug.Log ("RIGTH");
+					animatorController.SetTrigger( "RIGTH" );
+					//Debug.Log ("RIGTH");
 
-			}
-			break;
+				}
+				break;
 			case Direction.NONE: {
-				animatorController.SetTrigger( "IDLE" );
-				//Debug.Log ("IDLE");
+					animatorController.SetTrigger( "IDLE" );
+					//Debug.Log ("IDLE");
 
-			}
+				}
 			break;
 		}
+
+
 
 		lastDirection = direction;
 
