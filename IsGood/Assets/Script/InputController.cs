@@ -13,11 +13,8 @@ public class InputController : MonoBehaviour {
 	
 	public Rigidbody playerRigidbody;
 	public Animator animatorController;
-
-	public int idPlayer;
-	public float speed;
-	public float clamSpeed;
-	public float forceJump;
+	public DetectElementByTag ground;
+	public PlayerController player;
 
 	private Direction lastDirection;
 
@@ -51,30 +48,35 @@ public class InputController : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update() {
-		float moveX = Input.GetAxis( "MoveX_P" + idPlayer ); 
-		float moveZ = Input.GetAxis( "MoveZ_P" + idPlayer );
+		float moveX = Input.GetAxis( "MoveX_P" + player.idPlayer ); 
+		float moveZ = Input.GetAxis( "MoveZ_P" + player.idPlayer );
 
-		if ( ICanJump() ) {
-			Jump();
+		if ( ICanJump () ) {
+			Jump( moveX, moveZ );
+		} else {
+			Run( moveX, moveZ );
 		}
 
-		ApplayForce( moveX, moveZ );
 		Direction direction = GetDirection( (int) moveX, (int) moveZ );
 		SetAnimation( direction );
 
 
-		playerRigidbody.velocity = Vector3.ClampMagnitude( playerRigidbody.velocity, clamSpeed );
+		playerRigidbody.velocity = Vector3.ClampMagnitude( playerRigidbody.velocity, player.clamSpeed );
 
 	}
 
 	bool ICanJump() {
-		return true;
+		print ( "Jump_P" + player.idPlayer);
+		return Input.GetButtonDown( "Jump_P" + player.idPlayer );
 	}
 
-	void Jump() {
-		Vector3 force = new Vector3(0.0f, forceJump, 0.0f);
+	void Jump( float x, float z ) {
+		if ( !ground.IsDetected() )
+			return;
 
-		//playerRigidbody.AddForce( force );
+		Vector3 force = new Vector3(x, player.forceJump, z);
+
+		playerRigidbody.AddForce( force, ForceMode.Impulse );
 	}
 
 	void SetAnimation( Direction direction ) {
@@ -84,30 +86,30 @@ public class InputController : MonoBehaviour {
 		switch(direction) {
 			case Direction.TOP: {
 				animatorController.SetTrigger( "TOP" );
-				Debug.Log ("TOP");
+				//Debug.Log ("TOP");
 			}
 			break;
 			case Direction.BOTTON: {
 				animatorController.SetTrigger( "BOTTON" );
-				Debug.Log ("BOTTON");
+				//Debug.Log ("BOTTON");
 
 			}
 			break;
 			case Direction.LEFT: {
 				animatorController.SetTrigger( "LEFT" );
-				Debug.Log ("LEFT");
+				//Debug.Log ("LEFT");
 
 			}
 			break;
 			case Direction.RIGHT: {
 				animatorController.SetTrigger( "RIGTH" );
-				Debug.Log ("RIGTH");
+				//Debug.Log ("RIGTH");
 
 			}
 			break;
 			case Direction.NONE: {
 				animatorController.SetTrigger( "IDLE" );
-				Debug.Log ("IDLE");
+				//Debug.Log ("IDLE");
 
 			}
 			break;
@@ -117,14 +119,14 @@ public class InputController : MonoBehaviour {
 
 	}
 
-	void ApplayForce( float moveX, float moveZ ) {
+	void Run( float moveX, float moveZ ) {
 		if (Mathf.Abs (moveX) == 1 && Mathf.Abs (moveZ) == 1) {
-			moveX = moveX * 0.707f;
-			moveZ = moveZ * 0.707f;
+			moveX = moveX * 0.685f;
+			moveZ = moveZ * 0.685f;
 		}	
 
-		float x = speed * moveX;
-		float z = speed * moveZ;
+		float x = player.speed * moveX;
+		float z = player.speed * moveZ;
 
 		Vector3 velocity = new Vector3(x, 0.0f, z);
 
