@@ -35,9 +35,5 @@ public class HUD : MonoBehaviour {
 		if (totalPlayers >= 4) {
 			GUI.Label (new Rect (Camera.current.pixelWidth - 100, 100, 200, 200), p4);
 		}
-
-
-
 	}
-
 }
