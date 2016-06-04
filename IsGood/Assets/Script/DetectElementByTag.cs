@@ -11,7 +11,7 @@ public class DetectElementByTag : MonoBehaviour {
 	
 	}
 
-	void OnTriggerEnter(Collider other) {
+	void OnTriggerStay(Collider other) {
 		if (other.gameObject.tag == tag)
 			isDetected = true;
 	}
