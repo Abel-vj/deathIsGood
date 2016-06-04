@@ -9,3 +9,5 @@ EditorBuildSettings:
     path: Assets/Nivel/MainMenu.unity
   - enabled: 1
     path: Assets/Nivel/Nivel.unity
+  - enabled: 1
+    path: Assets/Scenes/MapaDefinitivo.unity
