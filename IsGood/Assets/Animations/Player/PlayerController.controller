@@ -38,6 +38,12 @@ AnimatorController:
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
+  - m_Name: PHASE
+    m_Type: 3
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 0}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -108,6 +114,9 @@ AnimatorStateTransition:
   m_Conditions:
   - m_ConditionMode: 1
     m_ConditionEvent: TOP
+    m_EventTreshold: 0
+  - m_ConditionMode: 6
+    m_ConditionEvent: PHASE
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 110273882}
@@ -305,7 +314,7 @@ AnimatorStateMachine:
     m_Position: {x: 36, y: -84, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 110273882}
-    m_Position: {x: 264, y: -168, z: 0}
+    m_Position: {x: 264, y: -216, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 110273242}
     m_Position: {x: 264, y: 24, z: 0}

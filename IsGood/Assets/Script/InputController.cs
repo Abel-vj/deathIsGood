@@ -75,14 +75,18 @@ public class InputController : MonoBehaviour {
 	bool ICanJump() {
 		return Input.GetButtonDown( "Jump_P" + player.idPlayer );
 	}
+		
 
 	void Jump( float x, float z ) {
-		if ( !ground.IsDetected() )
+		if ( !ground.IsDetected()  )
 			return;
+
 
 		Vector3 force = new Vector3(x, player.forceJump, z);
 
 		playerRigidbody.AddForce( force, ForceMode.Impulse );
+	
+
 	}
 
 	void SetAnimation( Direction direction ) {

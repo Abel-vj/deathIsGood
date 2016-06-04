@@ -8,6 +8,6 @@ PhysicMaterial:
   m_Name: Ramp
   dynamicFriction: 0.1
   staticFriction: 1
-  bounciness: 0
+  bounciness: 0.2
   frictionCombine: 0
-  bounceCombine: 0
+  bounceCombine: 1
