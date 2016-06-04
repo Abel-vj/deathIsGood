@@ -66,7 +66,6 @@ public class InputController : MonoBehaviour {
 	}
 
 	bool ICanJump() {
-		print ( "Jump_P" + player.idPlayer);
 		return Input.GetButtonDown( "Jump_P" + player.idPlayer );
 	}
 

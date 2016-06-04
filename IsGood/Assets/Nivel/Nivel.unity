@@ -85,6 +85,10 @@ NavMeshSettings:
     cellSize: 0.16666667
     manualCellSize: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &43552592 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 102176, guid: 331cccdc448adfa4ca355a0cf06151c8, type: 2}
+  m_PrefabInternal: {fileID: 1397884201}
 --- !u!4 &102082598 stripped
 Transform:
   m_PrefabParentObject: {fileID: 441258, guid: 331cccdc448adfa4ca355a0cf06151c8, type: 2}
@@ -884,6 +888,10 @@ Prefab:
       propertyPath: m_Color.b
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 102176, guid: 331cccdc448adfa4ca355a0cf06151c8, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 331cccdc448adfa4ca355a0cf06151c8, type: 2}
   m_IsPrefabParent: 0
@@ -907,6 +915,10 @@ BoxCollider:
 Transform:
   m_PrefabParentObject: {fileID: 400054, guid: 041a6b268224a5f4a9b63f7614d4f813, type: 3}
   m_PrefabInternal: {fileID: 634610275}
+--- !u!1 &1607344513 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 102176, guid: 331cccdc448adfa4ca355a0cf06151c8, type: 2}
+  m_PrefabInternal: {fileID: 1159534570}
 --- !u!1 &1679905035
 GameObject:
   m_ObjectHideFlags: 0
@@ -915,6 +927,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1679905036}
+  - 114: {fileID: 1679905037}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -934,6 +947,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 6
+--- !u!114 &1679905037
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1679905035}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68c5bf7711c14e84d8f2b9addfaf39e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player1: {fileID: 43552592}
+  player2: {fileID: 1607344513}
 --- !u!1 &1744564840 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100064, guid: 041a6b268224a5f4a9b63f7614d4f813, type: 3}

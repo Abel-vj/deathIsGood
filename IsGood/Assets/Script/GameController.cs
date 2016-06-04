@@ -3,17 +3,29 @@ using System.Collections;
 
 public class GameController : MonoBehaviour {
 
-	GameObject player1;
-	GameObject player2;
-	GameObject player3;
-	GameObject player4;
+	public GameObject player1;
+	public GameObject player2;
 
-	public int totalPlayers = 2;
+	int totalPlayers;
+	int maxPlayers = 2;
 
 	// Use this for initialization
 	void Start () {
-		GameController[] players = new GameController[ totalPlayers ];
-	
+		totalPlayers = Input.GetJoystickNames().Length;
+
+		GameObject[] players = new GameObject[ maxPlayers ];
+
+		players[0] = player1;
+		players[1] = player2;
+
+		for (int i = 0; i < maxPlayers; ++i) {
+			players[i].gameObject.SetActive(false);
+		}
+
+		for (int i = 0; i < totalPlayers; ++i) {
+			players[i].gameObject.SetActive(true);
+		}
+
 	}
 	
 	// Update is called once per frame
