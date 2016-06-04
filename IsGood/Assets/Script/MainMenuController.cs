@@ -6,11 +6,10 @@ public class MainMenuController : MonoBehaviour {
 	public Transform optionExit;
 	public Transform optionCredits;
 	public Transform optionHover;
-	public Transform nube1;
-	public Transform nube2;
-	public Transform nube3;
+
 	private int selected;
 	private Transform[] options;
+
 
 	// Use this for initialization
 	void Start () {
@@ -20,7 +19,7 @@ public class MainMenuController : MonoBehaviour {
 		options [2] = optionExit;
 		selected = 1;
 		ChangeOption (selected);
-	
+
 	}
 
 	void ChangeOption (int position) {
@@ -30,9 +29,6 @@ public class MainMenuController : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update() {
-		Vector3 pos = new Vector3(nube1.position.x + 1, 0, 0);
-		nube1.position = pos;
-
 
 		if (Input.GetKeyDown ("space")) {
 			if (selected == 0) {
