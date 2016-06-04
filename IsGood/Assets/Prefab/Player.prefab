@@ -80,7 +80,7 @@ Transform:
   m_GameObject: {fileID: 182172}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalScale: {x: 0.2, y: 0.5, z: 0.2}
   m_Children: []
   m_Father: {fileID: 441258}
   m_RootOrder: 2
@@ -92,7 +92,7 @@ Transform:
   m_GameObject: {fileID: 102176}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.42, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_Children:
   - {fileID: 489466}
   - {fileID: 482160}
@@ -106,8 +106,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 192854}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalPosition: {x: 0, y: 0.09, z: 0}
+  m_LocalScale: {x: 0.2, y: 0.4, z: 0.2}
   m_Children: []
   m_Father: {fileID: 441258}
   m_RootOrder: 1
@@ -242,7 +242,7 @@ MonoBehaviour:
   idPlayer: 1
   speed: 7
   clamSpeed: 0.5
-  forceJump: 3
+  forceJump: 4
 --- !u!114 &11487856
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -270,7 +270,7 @@ CapsuleCollider:
   m_Radius: 0.15
   m_Height: 2
   m_Direction: 1
-  m_Center: {x: 0, y: 0.76, z: 0}
+  m_Center: {x: 0, y: 0.78, z: 0}
 --- !u!212 &21241150
 SpriteRenderer:
   m_ObjectHideFlags: 1
