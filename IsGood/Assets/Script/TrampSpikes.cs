@@ -10,14 +10,14 @@ public class TrampSpikes : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		enableSpikes = true;
-		StartCoroutine( "ToogleSpikes" );
+		StartCoroutine( "ToggleSpikes" );
 	}
 		
-	IEnumerator ToogleSpikes() {
+	IEnumerator ToggleSpikes() {
 		while (true) {
 			yield return new WaitForSeconds(timeToToggle);
-			gameObectSpikes.SetActive( enabled );
-			enabled = !enabled;
+			gameObectSpikes.SetActive( enableSpikes );
+			enableSpikes = !enableSpikes;
 		}
 	}
 
