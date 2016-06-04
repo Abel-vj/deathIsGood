@@ -1,0 +1,258 @@
+fileFormatVersion: 2
+guid: 6d34fdd3168eddd41a236b026c03fac0
+timeCreated: 1465001212
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Sprites_Correr_Frente_0
+    21300002: Sprites_Correr_Frente_1
+    21300004: Sprites_Correr_Frente_2
+    21300006: Sprites_Correr_Frente_3
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 1000
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Sprites_Correr_Frente_0
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 21
+        width: 662
+        height: 982
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 39.5, y: -211.5}
+        - {x: 58.5, y: -203.5}
+        - {x: 80.5, y: -167.5}
+        - {x: 90.5, y: -111.5}
+        - {x: 96.5, y: -59.5}
+        - {x: 130.5, y: -91.5}
+        - {x: 157.5, y: -94.5}
+        - {x: 166.5, y: -90.5}
+        - {x: 166.5, y: -65.5}
+        - {x: 151.5, y: -32.5}
+        - {x: 96.5, y: 19.5}
+        - {x: 129.5, y: 41.5}
+        - {x: 138.5, y: 121.5}
+        - {x: 109.5, y: 212.5}
+        - {x: 85.5, y: 237.5}
+        - {x: 51.5, y: 246.5}
+        - {x: -35.5, y: 246.5}
+        - {x: -69.5, y: 235.5}
+        - {x: -94.5, y: 203.5}
+        - {x: -119.5, y: 107.5}
+        - {x: -111.5, y: 50.5}
+        - {x: -106.5, y: 19.5}
+        - {x: -151.5, y: -32.5}
+        - {x: -165.5, y: -62.5}
+        - {x: -165.5, y: -78.5}
+        - {x: -149.5, y: -88.5}
+        - {x: -126.5, y: -80.5}
+        - {x: -82.5, y: -38.5}
+        - {x: -89.5, y: -83.5}
+        - {x: -90.5, y: -112.5}
+        - {x: -70.5, y: -187.5}
+        - {x: -79.5, y: -205.5}
+        - {x: -83.5, y: -220.5}
+        - {x: -66.5, y: -245.5}
+        - {x: -31.5, y: -245.5}
+        - {x: -28.5, y: -244.5}
+        - {x: 3.5, y: -156.5}
+        - {x: 9.5, y: -208.5}
+        - {x: 19.5, y: -218.5}
+    - name: Sprites_Correr_Frente_1
+      rect:
+        serializedVersion: 2
+        x: 1209
+        y: 23
+        width: 654
+        height: 978
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 19.5, y: -244.5}
+        - {x: 21.5, y: -244.5}
+        - {x: 40.5, y: -235.5}
+        - {x: 64.5, y: -186.5}
+        - {x: 79.5, y: -155.5}
+        - {x: 87.5, y: -71.5}
+        - {x: 102.5, y: -54.5}
+        - {x: 137.5, y: -87.5}
+        - {x: 161.5, y: -81.5}
+        - {x: 164.5, y: -77.5}
+        - {x: 164.5, y: -58.5}
+        - {x: 105.5, y: 15.5}
+        - {x: 125.5, y: 54.5}
+        - {x: 132.5, y: 104.5}
+        - {x: 114.5, y: 194.5}
+        - {x: 92.5, y: 231.5}
+        - {x: 62.5, y: 245.5}
+        - {x: -38.5, y: 245.5}
+        - {x: -53.5, y: 242.5}
+        - {x: -90.5, y: 215.5}
+        - {x: -107.5, y: 135.5}
+        - {x: -121.5, y: 98.5}
+        - {x: -105.5, y: 43.5}
+        - {x: -163.5, y: -56.5}
+        - {x: -163.5, y: -68.5}
+        - {x: -156.5, y: -75.5}
+        - {x: -134.5, y: -76.5}
+        - {x: -126.5, y: -69.5}
+        - {x: -76.5, y: -17.5}
+        - {x: -81.5, y: -39.5}
+        - {x: -93.5, y: -89.5}
+        - {x: -63.5, y: -207.5}
+        - {x: -63.5, y: -241.5}
+        - {x: -59.5, y: -244.5}
+        - {x: -33.5, y: -244.5}
+        - {x: -25.5, y: -242.5}
+        - {x: -14.5, y: -229.5}
+        - {x: -0.5, y: -161.5}
+        - {x: -7.5, y: -203.5}
+    - name: Sprites_Correr_Frente_2
+      rect:
+        serializedVersion: 2
+        x: 2233
+        y: 23
+        width: 654
+        height: 978
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 20.5, y: -232.5}
+        - {x: 32.5, y: -244.5}
+        - {x: 61.5, y: -244.5}
+        - {x: 72.5, y: -240.5}
+        - {x: 62.5, y: -215.5}
+        - {x: 84.5, y: -98.5}
+        - {x: 84.5, y: -64.5}
+        - {x: 82.5, y: -42.5}
+        - {x: 133.5, y: -89.5}
+        - {x: 164.5, y: -79.5}
+        - {x: 164.5, y: -61.5}
+        - {x: 138.5, y: -21.5}
+        - {x: 94.5, y: 29.5}
+        - {x: 111.5, y: 32.5}
+        - {x: 136.5, y: 81.5}
+        - {x: 102.5, y: 214.5}
+        - {x: 71.5, y: 238.5}
+        - {x: 49.5, y: 245.5}
+        - {x: -46.5, y: 245.5}
+        - {x: -58.5, y: 244.5}
+        - {x: -90.5, y: 223.5}
+        - {x: -122.5, y: 108.5}
+        - {x: -115.5, y: 57.5}
+        - {x: -107.5, y: 26.5}
+        - {x: -163.5, y: -44.5}
+        - {x: -163.5, y: -67.5}
+        - {x: -144.5, y: -76.5}
+        - {x: -131.5, y: -71.5}
+        - {x: -81.5, y: -31.5}
+        - {x: -89.5, y: -77.5}
+        - {x: -90.5, y: -100.5}
+        - {x: -78.5, y: -174.5}
+        - {x: -44.5, y: -236.5}
+        - {x: -35.5, y: -244.5}
+        - {x: -11.5, y: -244.5}
+        - {x: 5.5, y: -210.5}
+        - {x: -9.5, y: -188.5}
+        - {x: 12.5, y: -196.5}
+    - name: Sprites_Correr_Frente_3
+      rect:
+        serializedVersion: 2
+        x: 3257
+        y: 23
+        width: 656
+        height: 978
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 129, y: -98.5}
+        - {x: 165, y: -94.5}
+        - {x: 165, y: -64.5}
+        - {x: 98, y: 18.5}
+        - {x: 122, y: 47.5}
+        - {x: 138, y: 79.5}
+        - {x: 115, y: 198.5}
+        - {x: 103, y: 212.5}
+        - {x: 86, y: 232.5}
+        - {x: 55, y: 245.5}
+        - {x: -59, y: 245.5}
+        - {x: -110, y: 193.5}
+        - {x: -123, y: 63.5}
+        - {x: -94, y: 28.5}
+        - {x: -144, y: -33.5}
+        - {x: -164, y: -63.5}
+        - {x: -164, y: -77.5}
+        - {x: -144, y: -89.5}
+        - {x: -135, y: -85.5}
+        - {x: -83, y: -46.5}
+        - {x: -93, y: -96.5}
+        - {x: -83, y: -163.5}
+        - {x: -69, y: -197.5}
+        - {x: -62, y: -206.5}
+        - {x: -31, y: -225.5}
+        - {x: -26, y: -224.5}
+        - {x: -21, y: -222.5}
+        - {x: -15, y: -216.5}
+        - {x: -12, y: -211.5}
+        - {x: -11, y: -202.5}
+        - {x: -12, y: -193.5}
+        - {x: 33, y: -244.5}
+        - {x: 59, y: -244.5}
+        - {x: 66, y: -242.5}
+        - {x: 81, y: -220.5}
+        - {x: 79, y: -141.5}
+        - {x: 91, y: -86.5}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
