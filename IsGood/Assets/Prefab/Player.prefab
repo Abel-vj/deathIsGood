@@ -240,9 +240,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pointToSpawn: {fileID: 0}
   idPlayer: 1
+  animatorController: {fileID: 9500576}
   speed: 50
   clamSpeed: 4
   forceJump: 20
+  isDead: 0
 --- !u!114 &11487856
 MonoBehaviour:
   m_ObjectHideFlags: 1
