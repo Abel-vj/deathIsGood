@@ -21,7 +21,7 @@ public class ControllerWinLevel : MonoBehaviour {
 		selected = 1;
 		ChangeOption (selected);
 
-		print( "(" +  winner + " )Escena paso" );
+		print( "(" +  Save.playerWinner + " )Escena paso" );
 
 	}
 
