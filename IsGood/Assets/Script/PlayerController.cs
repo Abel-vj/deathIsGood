@@ -32,11 +32,22 @@ public class PlayerController : MonoBehaviour {
 	public void Kill() {
 		if (isDead)
 			return;
-		
-		animatorController.SetTrigger( "KILL" );
 
 		isDead = true;
 		++countDeath;
+
+		animatorController.SetTrigger( "KILL" );
+
+		int newPhase = countDeath;
+
+		if (newPhase > 1) {
+			newPhase = 1;
+		}
+
+		animatorController.SetInteger( "PHASE", newPhase );
+
+		print ( "NUEVA FASE " + newPhase );
+
 		ApplayPowerUps();
 
 		Invoke ("Spawn", 0.2F);
