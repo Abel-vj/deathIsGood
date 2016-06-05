@@ -66,7 +66,8 @@ LightmapSettings:
     m_FinalGather: 0
     m_FinalGatherRayCount: 1024
     m_ReflectionCompression: 2
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000001, guid: e74d94e10012e5c48ab605433acd62ec,
+    type: 2}
   m_RuntimeCPUUsage: 25
 --- !u!196 &4
 NavMeshSettings:
@@ -1194,15 +1195,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 441258, guid: 331cccdc448adfa4ca355a0cf06151c8, type: 2}
       propertyPath: m_LocalScale.x
-      value: 1
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 441258, guid: 331cccdc448adfa4ca355a0cf06151c8, type: 2}
       propertyPath: m_LocalScale.y
-      value: 1
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 441258, guid: 331cccdc448adfa4ca355a0cf06151c8, type: 2}
       propertyPath: m_LocalScale.z
-      value: 1
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 102176, guid: 331cccdc448adfa4ca355a0cf06151c8, type: 2}
       propertyPath: m_Name
@@ -1212,6 +1213,10 @@ Prefab:
       propertyPath: pointToSpawn
       value: 
       objectReference: {fileID: 1506175051}
+    - target: {fileID: 11481186, guid: 331cccdc448adfa4ca355a0cf06151c8, type: 2}
+      propertyPath: idPlayer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 331cccdc448adfa4ca355a0cf06151c8, type: 2}
   m_IsPrefabParent: 0
@@ -13674,10 +13679,6 @@ Prefab:
     - target: {fileID: 102176, guid: 331cccdc448adfa4ca355a0cf06151c8, type: 2}
       propertyPath: m_Name
       value: Player1
-      objectReference: {fileID: 0}
-    - target: {fileID: 441258, guid: 331cccdc448adfa4ca355a0cf06151c8, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 1.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 331cccdc448adfa4ca355a0cf06151c8, type: 2}

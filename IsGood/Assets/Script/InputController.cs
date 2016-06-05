@@ -55,6 +55,8 @@ public class InputController : MonoBehaviour {
 	void Update() {
 		if (!gameStarted)
 			return;
+		if (player.isDead)
+			return;
 
 		float moveX = Input.GetAxis( "MoveX_P" + player.idPlayer ); 
 		float moveZ = Input.GetAxis( "MoveZ_P" + player.idPlayer );

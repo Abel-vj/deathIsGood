@@ -7,12 +7,13 @@ public class PlayerController : MonoBehaviour {
 
 	public Transform pointToSpawn;
 	public int idPlayer;
+	public Animator animatorController;
 
 	public float speed;
 	public float clamSpeed;
 	public float forceJump;
 
-	private bool isDead;
+	public bool isDead;
 	private Transform playerPosition;
 
 	void Start () {
@@ -31,12 +32,14 @@ public class PlayerController : MonoBehaviour {
 	public void Kill() {
 		if (isDead)
 			return;
+		
+		animatorController.SetTrigger( "KILL" );
 
 		isDead = true;
 		++countDeath;
 		ApplayPowerUps();
 
-		Spawn();
+		Invoke ("Spawn", 0.2F);
 	}
 
 	public void ApplayPowerUps() {
@@ -64,6 +67,7 @@ public class PlayerController : MonoBehaviour {
 	}
 
 	public void Spawn() {
+		animatorController.SetTrigger( "IDLE" );
 		playerPosition.position = pointToSpawn.position;
 		isDead = false;
 	}
