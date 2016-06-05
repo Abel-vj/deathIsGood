@@ -40,8 +40,8 @@ public class PlayerController : MonoBehaviour {
 
 		int newPhase = countDeath;
 
-		if (newPhase > 1) {
-			newPhase = 1;
+		if (newPhase > 2) {
+			newPhase = 2;
 		}
 
 		animatorController.SetInteger( "PHASE", newPhase );
