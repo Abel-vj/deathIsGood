@@ -3,7 +3,7 @@ using System.Collections;
 
 public class PlayerController : MonoBehaviour {
 
-	private int countDeath;
+	public int countDeath;
 
 	public Transform pointToSpawn;
 	public int idPlayer;
