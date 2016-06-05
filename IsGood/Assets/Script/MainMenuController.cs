@@ -35,7 +35,7 @@ public class MainMenuController : MonoBehaviour {
 				print("PRINT CREDITS");
 			}
 			if (selected == 1) {
-				Application.LoadLevel("MapaDefinitivo");
+				Application.LoadLevel("Nivel");
 			}
 			if (selected == 2) {
 				Application.Quit();
@@ -52,5 +52,4 @@ public class MainMenuController : MonoBehaviour {
 			ChangeOption (selected);
 		}
 	}
-
 }

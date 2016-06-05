@@ -6,6 +6,8 @@ public class ControllerWinLevel : MonoBehaviour {
 	public Transform goToMainMenu;
 	public Transform playAgaint;
 	public Transform optionHover;
+	public GameObject p1;
+	public GameObject p2;
 
 	private int selected;
 	private Transform[] options;
@@ -22,6 +24,12 @@ public class ControllerWinLevel : MonoBehaviour {
 		ChangeOption (selected);
 
 		print( "(" +  Save.playerWinner + " )Escena paso" );
+		if ( Save.playerWinner == 1) {
+			p1.SetActive (true);
+		} else if ( Save.playerWinner == 2) {
+			p2.SetActive (true);
+		}
+
 
 	}
 
@@ -34,11 +42,11 @@ public class ControllerWinLevel : MonoBehaviour {
 	void Update() {
 
 		if (Input.GetKeyDown ("space")) {
-			if (selected == 0) {
-				Application.LoadLevel("MainMenu");
+			if (selected == 0) {				
+				Application.LoadLevel("MapaDefinitivo");
 			}
 			if (selected == 1) {
-				Application.LoadLevel("MapaDefinitivo");
+				Application.LoadLevel("MainMenu");
 			}
 		}
 

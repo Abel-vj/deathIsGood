@@ -5,8 +5,7 @@ public class TrampSpikes : MonoBehaviour {
 
 	bool enableSpikes;
 	public GameObject gameObectSpikes;
-	public float timeUp;
-	public float timeDown;
+	public float timeToToggle;
 
 	// Use this for initialization
 	void Start () {
@@ -16,7 +15,7 @@ public class TrampSpikes : MonoBehaviour {
 		
 	IEnumerator ToggleSpikes() {
 		while (true) {
-			yield return new WaitForSeconds(enableSpikes ? timeUp : timeDown);
+			yield return new WaitForSeconds(timeToToggle);
 			gameObectSpikes.SetActive( enableSpikes );
 			enableSpikes = !enableSpikes;
 		}
