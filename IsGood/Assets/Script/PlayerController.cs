@@ -87,6 +87,7 @@ public class PlayerController : MonoBehaviour {
 		print ( scoreRun + " posicion del jugador " + idPlayer );
 		gameObject.SetActive( false );
 
+		Save.playerWinner = idPlayer;
 		Application.LoadLevel("WIN");
 	}
 
