@@ -25,17 +25,20 @@ public class HUD : MonoBehaviour {
 		deaths [2] = 0;
 		deaths [3] = 0;
 		
-		//totalPlayers = Input.GetJoystickNames().Length;
-		totalPlayers = 4;
+		totalPlayers = Input.GetJoystickNames().Length;
+		if (totalPlayers == 0) {
+			totalPlayers = 4;
+			print ("no joysticks connected");
+		}
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		
-		deaths [0] = p0ctr.countDeath;
-		deaths [1] = p1ctr.countDeath;
-		deaths [2] = p2ctr.countDeath;
-		deaths [3] = p3ctr.countDeath;
+		deaths [0] = Mathf.Min (p0ctr.countDeath, 4);
+		deaths [1] = Mathf.Min (p1ctr.countDeath, 4);	
+		deaths [2] = Mathf.Min (p2ctr.countDeath, 4);
+		deaths [3] = Mathf.Min(p3ctr.countDeath, 4);
 
 	}
 
