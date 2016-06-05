@@ -770,7 +770,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameObectSpikes: {fileID: 801777322}
-  timeToToggle: 1.75
+  timeUp: 5
+  timeDown: 1
 --- !u!1 &936642259
 GameObject:
   m_ObjectHideFlags: 0
