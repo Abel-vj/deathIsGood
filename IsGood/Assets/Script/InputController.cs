@@ -70,7 +70,6 @@ public class InputController : MonoBehaviour {
 
 		if ( ICanJump () ) {
 			Jump( moveX, moveZ, direction );
-			print ("CAN D ()"  + ground.IsDetected());
 		} else {
 			Run( moveX, moveZ );
 		}
@@ -97,8 +96,6 @@ public class InputController : MonoBehaviour {
 
 		playerRigidbody.AddForce( force, ForceMode.Impulse );
 
-
-		Debug.Log ("aaaaTOP" + direction);
 
 		switch(direction) {
 			case Direction.TOP: {
