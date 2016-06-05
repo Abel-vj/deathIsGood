@@ -11,3 +11,5 @@ EditorBuildSettings:
     path: Assets/Nivel/Nivel.unity
   - enabled: 1
     path: Assets/Scenes/MapaDefinitivo.unity
+  - enabled: 1
+    path: Assets/Scenes/WIN.unity
